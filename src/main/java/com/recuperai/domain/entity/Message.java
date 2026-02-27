@@ -3,10 +3,8 @@ package com.recuperai.domain.entity;
 import java.time.LocalDateTime;
 
 import com.recuperai.domain.Enum.Channel;
-import com.recuperai.domain.Enum.CheckoutStatus;
 import com.recuperai.domain.Enum.SendDirection;
 import com.recuperai.domain.Enum.SendStatus;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -54,18 +52,18 @@ public class Message {
     private Checkout checkout;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "direction")
+    @Column(name = "direction", nullable = false)
     private SendDirection direction;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "channel")
     private Channel channel;
 
-    @Column(name = "content")
+    @Column(name = "content", nullable = false)
     private String content;
 
     @Column(name = "idprovider_message")
-    private Integer idProviderMessage;
+    private String idProviderMessage;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "send_status")
