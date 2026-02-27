@@ -1,5 +1,8 @@
 package com.recuperai.domain.entity;
 
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,15 +23,22 @@ import lombok.Setter;
 public class Shop {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTIFY)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idshop")
+    private Long id;
 
-    @Colunm(nullable = false)
-    private String shopify_domain;
+    @Column(name = "shop_domain", nullable = false)
+    private String shopDomain;
 
-    @Column(nullable = false)
-    private String access_token:
+    @Column(name = "access_token", nullable = false)
+    private String accessToken;
 
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 
+    @Column (name = "updated_at")
+    private LocalDateTime updatedAt;
     
+    @Column (name = "active")
+    private Boolean active;
 }
