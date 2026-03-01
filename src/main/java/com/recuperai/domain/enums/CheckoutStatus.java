@@ -1,4 +1,4 @@
-package com.recuperai.domain.Enum;
+package com.recuperai.domain.enums;
 
 public enum CheckoutStatus {
     OPEN,

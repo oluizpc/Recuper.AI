@@ -2,9 +2,10 @@ package com.recuperai.domain.entity;
 
 import java.time.LocalDateTime;
 
-import com.recuperai.domain.Enum.Channel;
-import com.recuperai.domain.Enum.SendDirection;
-import com.recuperai.domain.Enum.SendStatus;
+import com.recuperai.domain.enums.Channel;
+import com.recuperai.domain.enums.SendDirection;
+import com.recuperai.domain.enums.SendStatus;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

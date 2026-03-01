@@ -2,8 +2,10 @@
 
     import java.math.BigDecimal;
     import java.time.LocalDateTime;
-    import com.recuperai.domain.Enum.CheckoutStatus;
-    import jakarta.persistence.Column;
+
+import com.recuperai.domain.enums.CheckoutStatus;
+
+import jakarta.persistence.Column;
     import jakarta.persistence.Entity;
     import jakarta.persistence.EnumType;
     import jakarta.persistence.Enumerated;
