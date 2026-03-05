@@ -25,7 +25,7 @@ public class Shop {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idshop")
-    private Long id;
+    private Integer id;
 
     @Column(name = "shop_domain", nullable = false)
     private String shopDomain;

@@ -33,7 +33,7 @@ import jakarta.persistence.Column;
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(name = "idcheckout")
-        private Long id;
+        private Integer id;
         
         @ManyToOne(fetch = FetchType.LAZY, optional = false)
         @JoinColumn(

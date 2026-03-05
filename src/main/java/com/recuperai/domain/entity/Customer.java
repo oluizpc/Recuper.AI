@@ -29,7 +29,7 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "idcustomer")
-    private Long id;
+    private Integer id;
 
      // FK idshop NOT NULL
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
