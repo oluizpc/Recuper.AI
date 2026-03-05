@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.recuperai.domain.entity.Checkout;
 
-public interface CheckoutRepository extends JpaRepository <Checkout,Long>{
+public interface CheckoutRepository extends JpaRepository <Checkout,Integer>{
 
 }

@@ -2,6 +2,9 @@
 
     import java.math.BigDecimal;
     import java.time.LocalDateTime;
+    
+    import org.hibernate.annotations.JdbcTypeCode;
+    import org.hibernate.type.SqlTypes;
 
 import com.recuperai.domain.enums.CheckoutStatus;
 
@@ -56,7 +59,8 @@ import jakarta.persistence.Column;
         private Customer customer;
 
         @Enumerated(EnumType.STRING)
-        @Column(name = "status")
+        @Column(name = "status", columnDefinition = "checkout_status")
+        @JdbcTypeCode(SqlTypes.NAMED_ENUM)
         private CheckoutStatus status;
 
         @Column (name = "total_value", precision = 12, scale = 2)
